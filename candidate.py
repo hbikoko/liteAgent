@@ -13,9 +13,9 @@ mock_metrics_agent = Agent(
 
 candidate_metrics = {
     "candidate_abc": {
-        "volume": 72,
-        "pacing": 85,
-        "tone": 90
+        "concise": 72,
+        "clarity": 85,
+        "correctness": 90
     }
 }
 
@@ -24,9 +24,9 @@ candidate_metrics = {
 async def auto_update_metrics(ctx: Context):
     for cand_id in candidate_metrics:
         candidate_metrics[cand_id] = {
-            "relevance": random.randint(0, 100),
-            "confidence": random.randint(0, 100),
-            "tone": random.randint(0, 100)
+            "concise": random.randint(0, 100),
+            "clarity": random.randint(0, 100),
+            "correctness": random.randint(0, 100)
         }
         ctx.logger.info(f"Updated metrics for {cand_id}: {candidate_metrics[cand_id]}")
 
