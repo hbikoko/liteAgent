@@ -1,0 +1,8 @@
+{
+    "name": "Python: mock_metrics_agent",
+    "type": "python",
+    "request": "launch",
+    "program": "${file}", 
+    "console": "integratedTerminal"
+  }
+  
